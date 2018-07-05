@@ -22,7 +22,7 @@ class Application
     elsif req.path.match(/add/)
       item = req.params["q"]
       if @@items.include?(item)
-        req.write "Added #{item}"
+        resp.write "Added #{item}"
       else
         req.write "We don't have that item"
       end
